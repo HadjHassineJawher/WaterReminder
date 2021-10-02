@@ -123,7 +123,8 @@
         app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.192"
+        android:textAlignment="center"/>
 
     <EditText
         android:id="@+id/email"
@@ -135,7 +136,8 @@
         app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintVertical_bias="0.286"
+        android:textAlignment="center"/>
 
     <EditText
         android:id="@+id/password"
@@ -147,7 +149,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintVertical_bias="0.381"
+        android:textAlignment="center"/>
 
     <EditText
         android:id="@+id/confirm_password"
@@ -160,7 +163,8 @@
         app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintVertical_bias="0.48"
+        android:textAlignment="center"/>
 
     <EditText
         android:id="@+id/height"
@@ -173,7 +177,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.577"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:textAlignment="center"/>
 
     <EditText
 
@@ -187,7 +192,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.676"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:textAlignment="center"/>
 
     <Button
         android:layout_width="173dp"
