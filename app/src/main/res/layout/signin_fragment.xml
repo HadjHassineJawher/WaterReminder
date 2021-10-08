@@ -7,21 +7,22 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="139dp"
-        android:layout_height="54dp"
+        android:layout_width="338dp"
+        android:layout_height="67dp"
         android:background="@drawable/signin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.134" />
 
     <TextView
-        android:id="@+id/EmailTextView"
+        android:id="@+id/txt_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
-        android:textColor="@color/black"
+        android:text="E-Mail"
+        android:textColor="@color/graylight"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,11 +32,11 @@
         app:layout_constraintVertical_bias="0.264" />
 
     <EditText
-        android:id="@+id/EmailEditText"
+        android:id="@+id/edt_email"
         android:layout_width="294dp"
         android:layout_height="57dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/inputfiled"
+        android:background="@drawable/inputsingin"
         android:hint="Your Email"
         android:inputType="text"
         android:textAlignment="center"
@@ -44,28 +45,28 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336" />
+        app:layout_constraintVertical_bias="0.33" />
 
     <TextView
-        android:id="@+id/PasswordTextView"
+        android:id="@+id/txt_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
-        android:textColor="@color/black"
+        android:textColor="@color/graylight"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+        app:layout_constraintVertical_bias="0.467" />
 
     <EditText
 
-        android:id="@+id/PasswordEditText"
+        android:id="@+id/edt_password"
         android:layout_width="294dp"
         android:layout_height="57dp"
-        android:background="@drawable/inputfiled"
+        android:background="@drawable/inputsingin"
         android:hint="Your password"
         android:inputType="textPassword"
         android:textAlignment="center"
@@ -73,13 +74,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.544" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btn_login"
         android:layout_width="212dp"
         android:layout_height="55dp"
-        android:background="@drawable/btnsubmit"
+        android:background="@drawable/buttonsignin"
         android:text="Sign In"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -88,13 +90,13 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.665" />
+        app:layout_constraintVertical_bias="0.739" />
 
     <TextView
         android:id="@+id/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign up"
+        android:text="Create One."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -107,7 +109,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have a compt ?"
+        android:text="Don't Have An Account .. !?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

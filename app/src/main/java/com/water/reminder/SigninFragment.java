@@ -15,14 +15,14 @@ public class SigninFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.signin_fragment,container,false);
-        TextView signUp = v.findViewById(R.id.SignUp);
-        Fragment signUpFragment= new SignupFragment();
+        TextView sign_up = v.findViewById(R.id.SignUp);
+        Fragment sign_up_fragment= new SignupFragment();
 
-        Button btnsignIn= v.findViewById(R.id.btnLogin);
-        signUp.setOnClickListener(new View.OnClickListener() {
+        Button btnsignIn= v.findViewById(R.id.btn_login);
+        sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().replace(R.id.authentification_container,signUpFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.authentification_container,sign_up_fragment).commit();
 
             }
 
