@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="graylight">#686868</color>
+    <color name="redDanger">#CE2400</color>
 </resources>
