@@ -14,8 +14,10 @@
         <entry key="..\:/WaterReminder-main/app/src/main/res/layout/activity_authentification.xml" value="0.25416666666666665" />
         <entry key="..\:/WaterReminder-main/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/WaterReminder-main/app/src/main/res/layout/authentification.xml" value="0.25416666666666665" />
+        <entry key="..\:/WaterReminder-main/app/src/main/res/layout/home_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/WaterReminder-main/app/src/main/res/layout/signin_fragment.xml" value="0.2" />
         <entry key="..\:/WaterReminder-main/app/src/main/res/layout/signup_fragment.xml" value="0.264" />
+        <entry key="..\:/WaterReminder-main/app/src/main/res/layout/stats_fragment.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

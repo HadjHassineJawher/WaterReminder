@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WaterReminder</string>
+    <string name="app_name_home">Water Reminder</string>
+    <string name="type_email">Type your email</string>
+    <string name="type_password">Type your password</string>
+    <string name="retype_password">Retype your password</string>
 </resources>

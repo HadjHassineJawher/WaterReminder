@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</ScrollView>
 
     <Button
         android:id="@+id/back_to_signin"
@@ -38,7 +43,7 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.576" />
@@ -59,8 +64,8 @@
 
     <TextView
         android:id="@+id/confirme_password"
-        android:layout_width="229dp"
-        android:layout_height="38dp"
+        android:layout_width="228dp"
+        android:layout_height="30dp"
         android:text="Confirme Password"
         android:textColor="@color/graylight"
         android:textSize="20dp"
@@ -80,10 +85,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.143" />
+        app:layout_constraintVertical_bias="0.177" />
 
     <TextView
 
@@ -94,7 +99,7 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.576" />
@@ -104,13 +109,14 @@
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:background="@drawable/inputsingin"
-        android:paddingRight="10dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
+        app:layout_constraintVertical_bias="0.222"
+        android:hint="@string/type_email"/>
 
     <EditText
         android:id="@+id/edt_password"
@@ -124,53 +130,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+        app:layout_constraintVertical_bias="0.332"
+        android:hint="@string/type_password"/>
 
     <EditText
         android:id="@+id/edt_confirme_password"
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:background="@drawable/inputsingin"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
         android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
+        app:layout_constraintVertical_bias="0.461"
+        android:hint="@string/retype_password"/>
 
     <EditText
 
         android:id="@+id/edt_weight"
-        android:layout_width="68dp"
-        android:layout_height="41dp"
-        android:background="@drawable/inputsingin"
+        android:layout_width="96dp"
+        android:layout_height="35dp"
+        android:background="@drawable/inputmini"
         android:inputType="number"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.645" />
+
 
     <EditText
 
         android:id="@+id/edt_height"
-        android:layout_width="72dp"
-        android:layout_height="48dp"
-        android:background="@drawable/inputsingin"
+        android:layout_width="96dp"
+        android:layout_height="35dp"
+        android:background="@drawable/inputmini"
         android:inputType="number"
-        android:paddingRight="10dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.645" />
 
     <Button
         android:id="@+id/btn_sgin_up"
