@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="graylight">#686868</color>
     <color name="redDanger">#CE2400</color>
+    <color name="dark_bleu">#0055AD</color>
+    <color name="light_bleu">#619CDA</color>
+    <color name="white_smoke">#F5F5F5</color>
 </resources>

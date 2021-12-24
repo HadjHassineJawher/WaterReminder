@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white_smoke"
+    android:padding="@dimen/padding_container">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="338dp"
-        android:layout_height="67dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/signin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,63 +23,67 @@
         android:id="@+id/txt_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="E-Mail"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/el_margin"
+        android:text="@string/tv_email"
         android:textColor="@color/graylight"
-        android:textSize="20dp"
+        android:textSize="@dimen/txt_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.276" />
 
     <EditText
         android:id="@+id/edt_email"
-        android:layout_width="294dp"
-        android:layout_height="57dp"
-        android:layout_marginLeft="10dp"
-        android:background="@drawable/inputsingin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/el_margin"
+        android:background="@drawable/rectangle_shape"
         android:hint="@string/type_email"
         android:inputType="text"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:padding="@dimen/padding_edt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.33"
+        tools:ignore="DuplicateIds" />
 
     <TextView
         android:id="@+id/txt_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/el_margin"
         android:text="Password"
         android:textColor="@color/graylight"
-        android:textSize="20dp"
+        android:textSize="@dimen/txt_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
+        app:layout_constraintVertical_bias="0.453" />
 
     <EditText
 
         android:id="@+id/edt_password"
-        android:layout_width="294dp"
-        android:layout_height="57dp"
-        android:background="@drawable/inputsingin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/el_margin"
+        android:background="@drawable/rectangle_shape"
         android:hint="@string/type_password"
         android:inputType="textPassword"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:padding="@dimen/padding_edt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.511" />
 
     <Button
         android:id="@+id/btn_login"
@@ -98,20 +104,19 @@
         android:id="@+id/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create One."
+        android:text="@string/txt_create_one"
+        android:textColor="#2D7EBC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863"
-        android:textColor="#2D7EBC"/>
+        app:layout_constraintVertical_bias="0.863" />
 
     <TextView
-        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't Have An Account .. !?"
+        android:text="@string/edt_don_t_have_an_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

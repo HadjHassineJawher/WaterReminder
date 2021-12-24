@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.water.reminder.SharedPrefernces.UserSessionManager;
 
 public class MainActivity extends AppCompatActivity {
-
+     UserSessionManager session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +16,11 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation_menu);
         Fragment home_fragment= new HomeFragment();
         bottomNavigation.setOnNavigationItemSelectedListener(navigationlistener);
+        session = new UserSessionManager(getApplicationContext());
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,home_fragment).commit();
+        if(session.checkLogin()){
+            finish();
+        }
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navigationlistener =
             item -> {

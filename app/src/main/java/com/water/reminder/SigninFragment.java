@@ -9,10 +9,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+import  com.water.reminder.SharedPrefernces.UserSessionManager;
 
 import androidx.fragment.app.Fragment;
 
+import com.water.reminder.SQLITE.DatabaseHelper;
+import com.water.reminder.SQLITE.User;
+
 public class SigninFragment extends Fragment {
+    UserSessionManager session;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -21,7 +27,7 @@ public class SigninFragment extends Fragment {
         Fragment sign_up_fragment= new SignupFragment();
         EditText edt_email=v.findViewById(R.id.edt_email);
         EditText edt_password= v.findViewById(R.id.edt_password);
-
+        session = new UserSessionManager(getContext());
         Button btnsignIn= v.findViewById(R.id.btn_login);
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,8 +43,19 @@ public class SigninFragment extends Fragment {
                checkEmail(edt_email);
                checkPassword(edt_password);
                if ((checkEmail(edt_email)==true)&&(checkPassword(edt_password))){
-                   Intent intent =new Intent(getContext(),MainActivity.class);
-                   startActivity(intent);
+                   DatabaseHelper dbHelper= new DatabaseHelper(getContext());
+                   User user=dbHelper.Login(edt_email.getText().toString(),edt_password.getText().toString());
+                   if(user.getId()==null){
+                       Toast.makeText(getActivity(),"Wrong Email or Password ",Toast.LENGTH_LONG).show();
+
+                   }else{
+                       session.createUserLoginSession(user.getId(),user.getUsername(), user.getEmail());
+                       Toast.makeText(getActivity(),"Welcome "+user.getUsername(),Toast.LENGTH_LONG).show();
+                       Intent intent =new Intent(getContext(),MainActivity.class);
+                       startActivity(intent);
+                   }
+
+
                }
             }
         });
