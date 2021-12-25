@@ -68,7 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public User getUserByID(int id){
 
-        SQLiteDatabase db=  this.getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
 
         User user = new User();
         Cursor res = db.rawQuery("select * from " + TABLE_NAME +" where id = ?", new String[]{Integer.toString(id)},null);
@@ -152,10 +152,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void updateUser(String username, String weight, String height,int id){
+    public void updateUser(String username,String password, String weight, String height,int id){
         SQLiteDatabase db  = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(USERNAME,username);
+        contentValues.put(PASSWORD,password);
         contentValues.put(WEIGHT,weight);
         contentValues.put(HEIGHT,height);
 

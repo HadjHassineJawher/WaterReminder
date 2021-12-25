@@ -14,4 +14,6 @@
     <string name="txt_create_one">Create One.</string>
     <string name="edt_type_your_password">type your password</string>
     <string name="edt_type_your_username">type your username</string>
+    <string name="txtv_update_profile">Update Profile</string>
+    <string name="btn_update">Update</string>
 </resources>
