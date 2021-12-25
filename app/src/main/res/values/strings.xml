@@ -16,4 +16,8 @@
     <string name="edt_type_your_username">type your username</string>
     <string name="txtv_update_profile">Update Profile</string>
     <string name="btn_update">Update</string>
+    <string name="itm_profile">Profile</string>
+    <string name="itm_logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

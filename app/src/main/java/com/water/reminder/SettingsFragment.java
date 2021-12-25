@@ -34,7 +34,7 @@ public class SettingsFragment extends Fragment {
         EditText edt_confirme_password = v.findViewById(R.id.edt_confirme_password);
         EditText edt_height = v.findViewById(R.id.edt_height);
         EditText edt_weight = v.findViewById(R.id.edt_weight);
-        System.out.println("id current user :" + user_settings.getId());
+
 
        try{
             user.toString();
