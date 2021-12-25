@@ -5,6 +5,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,7 +17,7 @@ import com.water.reminder.SQLITE.User;
 import com.water.reminder.SharedPrefernces.UserSessionManager;
 
 public class MainActivity extends AppCompatActivity {
-     UserSessionManager session;
+    UserSessionManager session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationView nv = findViewById(R.id.sideBar);
         nv.setNavigationItemSelectedListener(sidnavListener);
 
-        Fragment home_fragment= new HomeFragment();
+        Fragment home_fragment = new HomeFragment();
         bottomNavigation.setOnNavigationItemSelectedListener(navigationlistener);
 
         session = new UserSessionManager(getApplicationContext());
@@ -42,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         txtv_header_username.setText(user.getUsername());
         txtv_header_email.setText(user.getEmail());
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,home_fragment).commit();
-        if(session.checkLogin()){
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, home_fragment).commit();
+        if (session.checkLogin()) {
             finish();
         }
 
@@ -56,43 +57,45 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     private BottomNavigationView.OnNavigationItemSelectedListener navigationlistener =
             item -> {
                 Fragment selectedFragment = null;
-                switch(item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        selectedFragment =new HomeFragment();
+                        selectedFragment = new HomeFragment();
                         break;
                     case R.id.navigation_stats:
-                        selectedFragment =new StatsFragment();
+                        selectedFragment = new StatsFragment();
                         break;
                     case R.id.navigation_settings:
-                        selectedFragment =new SettingsFragment();
+                        selectedFragment = new SettingsFragment();
                         break;
-                };
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+                }
+                ;
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                 return true;
             };
 
-            public NavigationView.OnNavigationItemSelectedListener sidnavListener= new NavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedFragment = null;
-                    DrawerLayout dr = findViewById(R.id.drawerlayout);
-                    switch (item.getItemId()) {
-                        case R.id.itm_profile:
-                            selectedFragment = new ProfileFragment();
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-                            dr.closeDrawers();
-                            break;
-                        case R.id.itm_logout:
-                           session.logoutUser();
+    public NavigationView.OnNavigationItemSelectedListener sidnavListener = new NavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment selectedFragment = null;
+            DrawerLayout dr = findViewById(R.id.drawerlayout);
+            switch (item.getItemId()) {
+                case R.id.itm_profile:
+                    selectedFragment = new ProfileFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+                    dr.closeDrawers();
+                    break;
+                case R.id.itm_logout:
+                    session.logoutUser();
+                    break;
+            }
+            ;
+            return false;
+        }
 
-                            break;
-
-
-                };
-                    return false;
-            };
-        };
+        ;
+    };
 }
