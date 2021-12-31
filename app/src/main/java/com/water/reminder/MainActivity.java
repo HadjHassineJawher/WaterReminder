@@ -32,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         Fragment home_fragment = new HomeFragment();
         bottomNavigation.setOnNavigationItemSelectedListener(navigationlistener);
 
+        //create instance of shared prefeneces
         session = new UserSessionManager(getApplicationContext());
+        //get the saved data from shared prefeneces
         User user = session.getUserDetails();
 
         View header = nv.getHeaderView(0);

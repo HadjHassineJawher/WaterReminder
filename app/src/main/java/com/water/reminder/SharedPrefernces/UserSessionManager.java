@@ -80,12 +80,14 @@ public class UserSessionManager {
      * */
     public User getUserDetails(){
 
-        //Use hashmap to store user credentials
+        //Use user object to store user credentials
         User user = new User();
 
-        // user id
+        // Store user id
         user.setId(pref.getString(KEY_ID, null));
+        // Store user email
         user.setEmail(pref.getString(KEY_EMAIL, null));
+        // Store user username
         user.setUsername(pref.getString(KEY_USERNAME, null));
 
 
